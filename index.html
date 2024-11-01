@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/favicon.svg"
+      type="image/svg"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./node_modules/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/progressbar.js/local-dev/main.css"
+    />
+
+    <link rel="stylesheet" href="./assets/styles/normalize.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="aside">
+        <img
+          class="aside__icon-arrow"
+          src="./assets/icons/aside/arrow.svg"
+          alt="arrow"
+        />
+
+        <img
+          class="aside__logo"
+          src="./assets/icons/aside/logo.svg"
+          alt="logo"
+        />
+
+        <h1 class="aside__title">Univé</h1>
+
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="#"
+                ><img
+                  id="dashboard"
+                  src="./assets/icons/aside/dashboard.svg"
+                  alt="dashboard"
+                /><span>Dashboard</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  id="courses"
+                  src="./assets/icons/aside/courses.svg"
+                  alt="courses"
+                /><span>Courses</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  id="materials"
+                  src="./assets/icons/aside/materials.svg"
+                  alt="materials"
+                /><span>Materials</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  id="calendar"
+                  src="./assets/icons/aside/calendar.svg"
+                  alt="calendar"
+                /><span>Calendar</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  id="transcripts"
+                  src="./assets/icons/aside/transcripts.svg"
+                  alt="transcripts"
+                /><span>Transcripts</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  id="grades"
+                  src="./assets/icons/aside/grades.svg"
+                  alt="grades"
+                /><span>Grades</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  id="attendance"
+                  src="./assets/icons/aside/attendance.svg"
+                  alt="attendance"
+                /><span>Attendance</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  id="settings"
+                  src="./assets/icons/aside/settings.svg"
+                  alt="settings"
+                /><span>Settings</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="aside__container">
+          <div class="box">
+            <p>
+              <span id="one-line">Level up your skills,</span> <br />Software
+              <br />Engineering <br />MasterTrack® <br />Certificate
+            </p>
+          </div>
+        </div>
+      </aside>
+
+      <header class="header">
+        <button class="mobile-menu">
+          <img src="./assets/icons/aside/logo.svg" alt="Logo" />
+        </button>
+
+        <form class="header__form form-header" action="index.html">
+          <input
+            class="form-header__input"
+            type="search"
+            id="search"
+            placeholder="Search course, student or instructor"
+          />
+        </form>
+
+        <div class="header__line">
+          <div class="line"></div>
+        </div>
+
+        <div class="wrapper">
+          <span class="header__icon icon-left"
+            ><span class="noticement1"></span
+          ></span>
+
+          <span class="header__icon icon-right"
+            ><span class="noticement2"></span
+          ></span>
+
+          <img
+            class="header__img"
+            src="./assets/images/avatar.webp"
+            alt="user photo"
+          />
+
+          <p class="header__text">
+            <span>Mia V</span> <br />
+            student
+          </p>
+
+          <div class="header__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="main_container">
+          <section class="section-start">
+            <div class="section-start__wrapper">
+              <p id="hello">Hello, Mia!</p>
+
+              <div class="flatpickr">
+                <input
+                  type="text"
+                  id="flatpickr-calendar"
+                  placeholder="Select Date.."
+                  data-input
+                />
+
+                <a class="input-button" title="toggle" data-toggle>
+                  <i class="icon-calendar"></i>
+                  <svg id="calendar">
+                    <use xlink:href="./assets/icons/sprite.svg#calendar"></use>
+                  </svg>
+                </a>
+
+                <a class="input-button" title="clear" data-clear>
+                  <i class="icon-close"></i>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 17 17"
+                  >
+                    <g></g>
+                    <path
+                      d="M9.207 8.5l6.646 6.646-.707.707L8.5 9.207l-6.646 6.646-.707-.707L7.793 8.5 1.146 1.854l.707-.707L8.5 7.793l6.646-6.646.707.707L9.207 8.5z"
+                      fill="#FF0700"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+
+              <p id="customize">
+                <img
+                  src="./assets/icons/main/greetings/customize.svg"
+                  alt="customize"
+                />Customize
+              </p>
+            </div>
+          </section>
+
+          <section class="section-program">
+            <div class="container-desc">
+              <h2 class="container-desc__title">Active Programs</h2>
+
+              <div class="container-desc__menu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="container-university">
+              <div class="container-university__box1">
+                <img
+                  class="container-university__logo"
+                  src="./assets/images/program/academy.svg"
+                  alt="Logo university"
+                />
+              </div>
+
+              <div class="container-university__box2">
+                <div>Master of Computer Science</div>
+                <p>
+                  University of Upstate <br />
+                  at Brookstone
+                </p>
+              </div>
+
+              <div class="chart-container">
+                <div>
+                  <canvas id="activity-university"></canvas>
+                </div>
+              </div>
+
+              <div class="container-university__box4">
+                <div id="computer-science-progress"></div>
+                <div>Completion</div>
+              </div>
+            </div>
+
+            <div class="container-university__line"></div>
+
+            <div class="container-academy">
+              <div class="container-academy__box1">
+                <img
+                  class="container-academy__logo"
+                  src="./assets/images/program/university.svg"
+                  alt="Logo academy"
+                />
+              </div>
+
+              <div class="container-academy__box2">
+                <div>CERTIFICATE UX/UI design</div>
+                <p>
+                  Academy of Art and Technology <br />
+                  at Dursburg
+                </p>
+              </div>
+
+              <div class="chart-container">
+                <div>
+                  <canvas id="activity-academy"></canvas>
+                </div>
+              </div>
+
+              <div class="container-academy__box4">
+                <div id="ux-design-progress"></div>
+                <div>Completion</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-progress">
+            <div class="section-progress__container">
+              <img
+                class="section-progress__img"
+                src="./assets/images/progress/photo.png"
+                alt="Progress"
+              />
+
+              <div class="section-progress__cheked-in">
+                <img
+                  src="./assets/icons/main/progress/checked.svg"
+                  alt="Checked"
+                />
+                Checked in
+              </div>
+            </div>
+
+            <div class="section-progress__info info-progress">
+              <div class="info-progress__wrapper">
+                UX Research - Week 3
+                <p>08 <br /><span>APRIL</span></p>
+              </div>
+
+              <p class="info-progress__text">CERTIFICATE UX/UI design</p>
+
+              <div class="info-progress__container">
+                <img src="./assets/icons/main/progress/clock.svg" alt="Clock" />
+                In Progress
+                <span>Join Now</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="mobile-section-progress">
+            <div class="mobile-section-progress__img">
+              <img
+                class="mobile-section-progress__arrow"
+                src="./assets/icons/main/progress/checked.svg"
+                alt="Checked"
+              />
+              <span class="mobile-section-progress__text">Checked in</span>
+            </div>
+
+            <div class="mobile-section-progress__wrapper">
+              <div class="info-progress__wrapper">
+                UX Research - Week 3
+                <p>08 <br /><span>APRIL</span></p>
+              </div>
+
+              <p class="info-progress__text">CERTIFICATE UX/UI design</p>
+
+              <div class="info-progress__container">
+                <img src="./assets/icons/main/progress/clock.svg" alt="Clock" />
+                In Progress
+                <span>Join Now</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-sessions">
+            <div class="section-sessions__desc">
+              <h2 class="section-sessions__subtitle">Upcoming Sessions</h2>
+              <div class="section-sessions__menu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="section-sessions__name">
+              <p>Date</p>
+              <p>Class</p>
+              <p>Time</p>
+            </div>
+
+            <div class="section-sessions__schedule schedule">
+              <p>
+                Tomorrow <br />
+                <span>09</span> <br />
+                <span>APRIL</span>
+              </p>
+
+              <div class="schedule__text">
+                <span>Database and Information Systems</span>
+                Master of Computer Science
+              </div>
+
+              <div class="schedule__time" id="time-hidden1">8:30am-1:00pm</div>
+            </div>
+
+            <div class="section-sessions__line"></div>
+
+            <div class="section-sessions__schedule schedule">
+              <p>
+                Wed <br />
+                <span>10</span> <br />
+                <span>APRIL</span>
+              </p>
+
+              <div class="schedule__text">
+                <span>AI and Machine Learning </span>
+                Master of Computer Science
+              </div>
+
+              <div class="schedule__time" id="time-hidden2">9:30am-12:00pm</div>
+            </div>
+
+            <div class="section-sessions__line"></div>
+
+            <div class="section-sessions__schedule schedule">
+              <p>
+                Wed <br />
+                <span>10</span> <br />
+                <span>APRIL</span>
+              </p>
+
+              <div class="schedule__text">
+                <span>Definition & Ideation </span>
+                Certificate UX/UI Design
+              </div>
+
+              <div class="schedule__time" id="time-hidden3">9:30am-12:00pm</div>
+            </div>
+
+            <div class="section-sessions__all">See All Sessions</div>
+          </section>
+
+          <section class="section-messaging">
+            <div class="section-messaging__header header-messaging">
+              <div class="header-messaging__img">
+                <img src="./assets/images/avatar.webp" alt="User icon" />
+                <span id="active"></span>
+              </div>
+
+              Messaging
+
+              <div class="header-messaging__menu">
+                <img
+                  id="search-message"
+                  src="./assets/icons/main/messaging/search-mini.svg"
+                  alt="Search"
+                />
+
+                <img
+                  id="edit"
+                  src="./assets/icons/main/messaging/edit.svg"
+                  alt="Edit"
+                />
+
+                <div>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <svg
+                  class="arrow-down"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                >
+                  <path
+                    d="M15.9999 18.6667C15.7273 18.6672 15.4631 18.5723 15.2532 18.3983L8.25325 12.565C8.015 12.367 7.86517 12.0824 7.83672 11.7739C7.80828 11.4654 7.90355 11.1582 8.10158 10.92C8.29961 10.6817 8.58417 10.5319 8.89267 10.5035C9.20117 10.475 9.50833 10.5703 9.74658 10.7683L15.9999 15.995L22.2533 10.955C22.3726 10.8581 22.5099 10.7857 22.6573 10.742C22.8047 10.6984 22.9593 10.6843 23.1121 10.7005C23.265 10.7168 23.4131 10.7631 23.5481 10.8368C23.683 10.9105 23.802 11.0101 23.8983 11.13C24.0051 11.25 24.086 11.3907 24.1359 11.5434C24.1859 11.6961 24.2037 11.8574 24.1884 12.0173C24.173 12.1772 24.1249 12.3322 24.0468 12.4727C23.9688 12.6131 23.8626 12.7359 23.7349 12.8333L16.7349 18.4683C16.519 18.6148 16.2602 18.6846 15.9999 18.6667Z"
+                    fill="#5855D6"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <div class="section-messaging__stories stories">
+              <div class="stories__wrapper">
+                <span class="stories__add">
+                  <img
+                    src="./assets/icons/main/messaging/plus.svg"
+                    alt="Plus"
+                  />
+                </span>
+
+                <span class="stories__text">Add</span>
+              </div>
+
+              <div class="stories__wrapper">
+                <div class="stories__pfofile" id="Dianne">
+                  <img
+                    src="./assets/images/messaging/friend-photo.svg"
+                    alt="Dianne"
+                  />
+                </div>
+                <span class="stories__text">Dianne</span>
+              </div>
+
+              <div class="stories__wrapper">
+                <div class="stories__pfofile" id="Jarvis">
+                  <img
+                    src="./assets/images/messaging/friend-photo2.svg"
+                    alt="Jarvis"
+                  />
+                </div>
+                <span class="stories__text">Jarvis</span>
+              </div>
+
+              <div class="stories__wrapper">
+                <div class="stories__pfofile" id="Miles">
+                  <img
+                    src="./assets/images/messaging/friend-photo3.svg"
+                    alt="Miles"
+                  />
+                </div>
+                <span class="stories__text">Miles</span>
+              </div>
+
+              <div class="stories__wrapper" id="half-photo">
+                <div class="stories__pfofile">
+                  <img
+                    id="Su"
+                    src="./assets/images/messaging/friend-photo4.svg"
+                    alt="Su"
+                  />
+                </div>
+                <span class="stories__text">Su</span>
+              </div>
+            </div>
+
+            <div class="section-messaging__line"></div>
+
+            <div class="section-messaging__message message">
+              <img src="./assets/images/messaging/sophie.svg" alt="Sophie" />
+
+              <div class="message__wrapper">
+                <span>Sophie Kowalski</span>
+                <span>Thanks, Mia. Please let me know when I can...</span>
+              </div>
+
+              <div class="message__container">
+                <span>3 min</span>
+                <span>1</span>
+              </div>
+            </div>
+
+            <div class="section-messaging__line"></div>
+
+            <div class="section-messaging__message message">
+              <img src="./assets/images/messaging/chris.svg" alt="Chris" />
+
+              <div class="message__wrapper">
+                <span>Sophie Kowalski</span>
+                <span>Thanks, Mia. Please let me know when I can...</span>
+              </div>
+
+              <div class="message__container">
+                <span>5 min</span>
+                <span>3</span>
+              </div>
+            </div>
+
+            <div class="section-messaging__line"></div>
+
+            <div class="section-messaging__message message">
+              <img src="./assets/images/messaging/john.svg" alt="John" />
+
+              <div class="message__wrapper">
+                <span>Sophie Kowalski</span>
+                <span>Thanks, Mia. Please let me know when I can...</span>
+              </div>
+
+              <div class="message__container">
+                <span>8 min</span>
+              </div>
+            </div>
+
+            <div class="section-messaging__line"></div>
+
+            <div class="section-messaging__message message">
+              <img src="./assets/images/messaging/johm.svg" alt="Johm" />
+
+              <div class="message__wrapper">
+                <span>Sophie Kowalski</span>
+                <span>Thanks, Mia. Please let me know when I can...</span>
+              </div>
+
+              <div class="message__container">
+                <span>9 min</span>
+                <span>10</span>
+              </div>
+            </div>
+
+            <div class="section-messaging__line"></div>
+
+            <div class="section-messaging__message message">
+              <img src="./assets/images/messaging/friend-photo4.svg" alt="Su" />
+
+              <div class="message__wrapper">
+                <span>Sophie Kowalski</span>
+                <span>Thanks, Mia. Please let me know when I can...</span>
+              </div>
+
+              <div class="message__container">
+                <span>Monday</span>
+              </div>
+            </div>
+
+            <div class="section-messaging__line"></div>
+
+            <div class="section-messaging__message message">
+              <img src="./assets/images/messaging/chris.svg" alt="Chris" />
+
+              <div class="message__wrapper">
+                <span>Sophie Kowalski</span>
+                <span>Thanks, Mia. Please let me know when I can...</span>
+              </div>
+
+              <div class="message__container">
+                <span>Friday</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <nav class="mobile-nav">
+        <ul class="mobile-nav__list">
+          <li class="mobile-nav__item item-mobile">
+            <a class="item-mobile__link" href="#">
+              <svg class="item-mobile__img" id="mobile-dashboard">
+                <use
+                  xlink:href="./assets/icons/sprite.svg#mobile-dashboard"
+                ></use>
+              </svg>
+              <span>Dashboard</span>
+            </a>
+          </li>
+
+          <li class="mobile-nav__item item-mobile">
+            <a class="item-mobile__link" href="#">
+              <svg class="item-mobile__img">
+                <use xlink:href="./assets/icons/sprite.svg#courses"></use>
+              </svg>
+              <span>Courses</span>
+            </a>
+          </li>
+
+          <li class="mobile-nav__item item-mobile">
+            <a class="item-mobile__link" href="#">
+              <svg class="item-mobile__img">
+                <use xlink:href="./assets/icons/sprite.svg#notifications"></use>
+              </svg>
+              <span>Notifications</span>
+            </a>
+          </li>
+
+          <li class="mobile-nav__item item-mobile">
+            <a class="item-mobile__link" href="#">
+              <svg class="item-mobile__img">
+                <use xlink:href="./assets/icons/sprite.svg#settings"></use>
+              </svg>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <script src="./node_modules/chart.js/dist/chart.umd.js"></script>
+    <script src="./node_modules/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="./node_modules/progressbar.js/dist/progressbar.js"></script>
+    <script src="./assets/scripts/progress.js"></script>
+    <script src="./assets/scripts/activity.js"></script>
+    <script src="./assets/scripts/calendar.js"></script>
+  </body>
+</html>
